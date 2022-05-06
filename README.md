@@ -1,3 +1,5 @@
+Challenge de angular en donde llegue a hacer algunas tips del challenge. Entre ellos son la creacion de un formulario en donde uso validators como tambien la utilizacion de bootstrap.
+
 # ProyectoMenu
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.4.
