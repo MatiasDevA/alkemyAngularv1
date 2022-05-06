@@ -1,0 +1,38 @@
+<div class="d-flex justify-content-between bg-warning">
+<p class="text-uppercase pt-2 ps-2 ">Restaurante Alkemy</p>
+  <form class="row g-3" [formGroup]="form" (ngSubmit)="onEnviar($event)">
+    <div  class="col-auto">
+      <label for="email" class="visually-hidden" >Email</label>
+      <input type="text" class="form-control"  id="email" formControlName="email" placeholder="email">
+      <div *ngIf="Email?.errors && Email?.touched" class="col-auto">
+        <p *ngIf="Email?.hasError('required')" class="text-danger">
+          El email es requerido.
+        </p>
+        <p *ngIf="Email?.hasError('email')" class="text-danger">
+          El formato del email debe ser válido.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-auto">
+      <label for="inputPassword2" class="visually-hidden">Password</label>
+      <input type="password" class="form-control" formControlName="password" id="inputPassword2" placeholder="Password">
+      <div *ngIf="Password?.errors && Password?.touched" class="col-auto">
+        <p *ngIf="Password?.hasError('required')" class="text-danger border-danger">
+          El password es requerido.
+        </p>
+        <p *ngIf="Password?.errors?.['minlength']" class="text-danger">
+          El password debe ser de 5 o más caracteres.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-auto me-2">
+      <button type="submit" class="btn btn-primary mb-3">Enviar</button>
+    </div>
+  </form>
+</div>
+<div>
+  <p class="text-center fs-1 font-monospace pt-5">Restaurante: Menu</p>
+  
+</div>
